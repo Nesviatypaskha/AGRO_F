@@ -1,3 +1,4 @@
+import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import 'package:flutter/material.dart';
@@ -40,25 +41,72 @@ class _HomePageWidgetState extends State<HomePageWidget> {
       child: Scaffold(
         key: scaffoldKey,
         backgroundColor: FlutterFlowTheme.of(context).primaryBackground,
-        appBar: AppBar(
-          backgroundColor: FlutterFlowTheme.of(context).primary,
-          automaticallyImplyLeading: false,
-          title: Text(
-            'Page Title',
-            style: FlutterFlowTheme.of(context).headlineMedium.override(
-                  fontFamily: 'Poppins',
-                  color: Colors.white,
-                  fontSize: 22.0,
-                ),
-          ),
-          actions: [],
-          centerTitle: false,
-          elevation: 2.0,
-        ),
         body: SafeArea(
-          child: Column(
-            mainAxisSize: MainAxisSize.max,
-            children: [],
+          child: Padding(
+            padding: EdgeInsetsDirectional.fromSTEB(10.0, 10.0, 10.0, 10.0),
+            child: Container(
+              width: 350.0,
+              height: MediaQuery.of(context).size.height * 1.0,
+              decoration: BoxDecoration(
+                color: Color(0xA0000000),
+                boxShadow: [
+                  BoxShadow(
+                    blurRadius: 4.0,
+                    color: Color(0x33000000),
+                    offset: Offset(0.0, 2.0),
+                  )
+                ],
+                borderRadius: BorderRadius.circular(20.0),
+                shape: BoxShape.rectangle,
+                border: Border.all(
+                  color: Color(0x03E0E3E7),
+                  width: 10.0,
+                ),
+              ),
+              child: Align(
+                alignment: AlignmentDirectional(0.0, 1.0),
+                child: Row(
+                  mainAxisSize: MainAxisSize.min,
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  crossAxisAlignment: CrossAxisAlignment.end,
+                  children: [
+                    Expanded(
+                      child: Align(
+                        alignment: AlignmentDirectional(-1.0, 0.0),
+                        child: FlutterFlowIconButton(
+                          borderColor: Colors.transparent,
+                          borderRadius: 30.0,
+                          borderWidth: 1.0,
+                          buttonSize: 60.0,
+                          icon: Icon(
+                            Icons.close,
+                            color: Colors.white,
+                            size: 40.0,
+                          ),
+                          onPressed: () {
+                            print('IconButton pressed ...');
+                          },
+                        ),
+                      ),
+                    ),
+                    Align(
+                      alignment: AlignmentDirectional(1.0, 0.0),
+                      child: FlutterFlowIconButton(
+                        buttonSize: 60.0,
+                        icon: Icon(
+                          Icons.add_circle_sharp,
+                          color: Colors.white,
+                          size: 40.0,
+                        ),
+                        onPressed: () {
+                          print('IconButton pressed ...');
+                        },
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            ),
           ),
         ),
       ),
